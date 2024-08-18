@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-Duty Request Form</title>
+</head>
+<body>
+    <h2 align="center">On-Duty Request Form</h2>
+    <form  style="width: 50%; margin: 0 auto;background-color: #c39d85; padding: 20px; width: 500px;"" action="/submit_od-request="post" >
+    
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" required><br><br>
+            
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position" required><br><br>
+            
+            <label for="manager">Manager/Supervisor Name:</label>
+            <input type="text" id="manager" name="manager" required><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>On-Duty Request Details</legend>
+            <label for="od-date">On-Duty Date:</label>
+            <input type="date" id="od-date" name="od-date" required><br><br>
+            
+            <label for="od-time-start">On-Duty Start Time:</label>
+            <input type="time" id="od-time-start" name="od-time-start" required><br><br>
+            
+            <label for="od-time-end">On-Duty End Time:</label>
+            <input type="time" id="od-time-end" name="od-time-end" required><br><br>
+            
+            <label for="od-reason">Reason for On-Duty:</label>
+            <textarea id="od-reason" name="od-reason" rows="6" cols="50" required></textarea><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Manager's Approval</legend>
+            <label for="manager-approval">Manager's Approval:</label>
+            <input type="text" id="manager-approval" name="manager-approval" readonly><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit On-Duty Request">
+    </form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Passbook Request Form</title>
+</head>
+<body>
+    <h1 align="center">Bank Passbook Request Form</h1>
+    <form  style="width: 50%; margin: 0 auto;background-color: #A69CAC; padding: 20px; width: 500px;"" action="/submit_passbook_request" method="post" >
+        <!-- Personal Information Section -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <label for="account_holder_name">Account Holder Name:</label>
+            <input type="text" id="account_holder_name" name="account_holder_name" required><br><br>
+            
+            <label for="account_number">Account Number:</label>
+            <input type="text" id="account_number" name="account_number" pattern="[0-9]{12}" required><br><br>
+            
+            <label for="branch_name">Branch Name:</label>
+            <input type="text" id="branch_name" name="branch_name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+        </fieldset>
+        
+        <!-- Request Details Section -->
+        <fieldset>
+            <legend>Request Details</legend>
+            
+            <label for="request_type">Request Type:</label>
+            <select id="request_type" name="request_type" required>
+                <option value="">Select Request Type</option>
+                <option value="new_passbook">New Passbook</option>
+                <option value="duplicate_passbook">Duplicate Passbook</option>
+                <option value="update_passbook">Update Existing Passbook</option>
+            </select><br><br>
+            
+            <label for="request_reason">Reason for Request:</label><br>
+            <textarea id="request_reason" name="request_reason" rows="4" cols="50" required></textarea><br><br>
+            
+            <label for="delivery_method">Preferred Delivery Method:</label>
+            <select id="delivery_method" name="delivery_method" required>
+                <option value="">Select Delivery Method</option>
+                <option value="branch_pickup">Branch Pickup</option>
+                <option value="postal_delivery">Postal Delivery</option>
+            </select><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit Request">
+    </form>
+</body>
+</html>

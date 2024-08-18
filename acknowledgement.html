@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acknowledgment Form</title>
+</head>
+<body>
+    <h2 align="center">Acknowledgment Form</h2>
+    <form  style="width: 50%; margin: 0 auto;background-color: #C08552; padding: 20px; width: 500px;"" action="/submit_acknowledgement="post" >
+    
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Document/Item Details</legend>
+            <label for="doc-title">Document/Item Title:</label>
+            <input type="text" id="doc-title" name="doc-title" required><br><br>
+            
+            <label for="doc-number">Document/Item Number:</label>
+            <input type="text" id="doc-number" name="doc-number" required><br><br>
+            
+            <label for="doc-date">Document/Item Date:</label>
+            <input type="date" id="doc-date" name="doc-date" required><br><br>
+            
+            <label for="doc-description">Document/Item Description:</label>
+            <textarea id="doc-description" name="doc-description" rows="6" cols="50" required></textarea><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Acknowledgment Details</legend>
+            <label for="acknowledgment-statement">Acknowledgment Statement:</label>
+            <textarea id="acknowledgment-statement" name="acknowledgment-statement" rows="6" cols="50" required></textarea><br><br>
+            
+            <label for="signature">Signature:</label>
+            <input type="text" id="signature" name="signature" required><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit Acknowledgment">
+    </form>
+</body>
+</html>

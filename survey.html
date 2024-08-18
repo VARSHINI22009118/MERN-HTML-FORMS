@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h2 align="center">Survey Form</h2>
+    <form  style="width: 50%; margin: 0 auto;background-color: lightblue; padding: 20px; width: 500px;"" action="/submit_survey" method="post" >
+        <!-- Survey Question 1 -->
+        <fieldset>
+            <legend>Survey Question 1</legend>
+            
+            <label for="q1">How satisfied are you with our service?</label><br>
+            <input type="radio" id="q1_1" name="q1" value="very_satisfied"> Very Satisfied<br>
+            <input type="radio" id="q1_2" name="q1" value="satisfied"> Satisfied<br>
+            <input type="radio" id="q1_3" name="q1" value="neutral"> Neutral<br>
+            <input type="radio" id="q1_4" name="q1" value="dissatisfied"> Dissatisfied<br>
+            <input type="radio" id="q1_5" name="q1" value="very_dissatisfied"> Very Dissatisfied<br><br>
+        </fieldset>
+        
+        <!-- Survey Question 2 -->
+        <fieldset>
+            <legend>Survey Question 2</legend>
+            
+            <label for="q2">What features would you like to see improved?</label><br>
+            <input type="checkbox" id="q2_1" name="q2" value="quality"> Quality<br>
+            <input type="checkbox" id="q2_2" name="q2" value="support"> Customer Support<br>
+            <input type="checkbox" id="q2_3" name="q2" value="price"> Pricing<br>
+            <input type="checkbox" id="q2_4" name="q2" value="ease_of_use"> Ease of Use<br><br>
+        </fieldset>
+        
+        <!-- Survey Question 3 -->
+        <fieldset>
+            <legend>Survey Question 3</legend>
+            
+            <label for="q3">Additional Comments:</label><br>
+            <textarea id="q3" name="q3" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+        
+        <!-- Submission -->
+        <input type="submit" value="Submit Survey">
+    </form>
+</body>
+</html>

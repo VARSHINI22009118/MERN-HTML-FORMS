@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Form</title>
+</head>
+<body>
+    <h2 align="center">Insurance Application Form</h2>
+    <form  style="width: 50%; margin: 0 auto;background-color: #CEB5A7; padding: 20px; width: 500px;"" action="/submit_insurance" method="post" >
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+            
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required> Male
+            <input type="radio" id="female" name="gender" value="female" required> Female
+            <input type="radio" id="other" name="gender" value="other" required> Other<br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Insurance Details</legend>
+            <label for="insurance-type">Type of Insurance:</label>
+            <select id="insurance-type" name="insurance-type" required>
+                <option value="health">Health Insurance</option>
+                <option value="life">Life Insurance</option>
+                <option value="vehicle">Vehicle Insurance</option>
+                <option value="home">Home Insurance</option>
+            </select><br><br>
+            
+            <label for="coverage">Coverage Amount:</label>
+            <input type="number" id="coverage" name="coverage" required><br><br>
+            
+            <label for="beneficiaries">Beneficiaries (if any):</label>
+            <textarea id="beneficiaries" name="beneficiaries" rows="4" cols="50"></textarea><br><br>
+            
+            <label for="existing-policy">Do you have an existing policy?</label>
+            <input type="radio" id="yes" name="existing-policy" value="yes" required> Yes
+            <input type="radio" id="no" name="existing-policy" value="no" required> No<br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Declaration</legend>
+            <input type="checkbox" id="declaration" name="declaration" required>
+            <label for="declaration">I hereby declare that the information provided is true and accurate to the best of my knowledge.</label><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

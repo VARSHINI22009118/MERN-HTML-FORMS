@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Form</title>
+</head>
+<body>
+    <h1 align="center">Quiz Form</h1>
+    <form  style="width: 50%; margin: 0 auto;background-color: #EDCF8E; padding: 20px; width: 500px;"" action="/submit_quiz" method="post" >
+        <!-- Participant Information Section -->
+        <fieldset>
+            <legend>Participant Information</legend>
+            
+            <label for="participant_name">Name:</label>
+            <input type="text" id="participant_name" name="participant_name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+        </fieldset>
+        
+        <!-- Quiz Questions Section -->
+        <fieldset>
+            <legend>Quiz Questions</legend>
+            
+            <p>1. What is the capital of France?</p>
+            <input type="radio" id="paris" name="q1" value="paris" required>
+            <label for="paris">Paris</label><br>
+            <input type="radio" id="london" name="q1" value="london">
+            <label for="london">London</label><br>
+            <input type="radio" id="berlin" name="q1" value="berlin">
+            <label for="berlin">Berlin</label><br>
+            <input type="radio" id="madrid" name="q1" value="madrid">
+            <label for="madrid">Madrid</label><br><br>
+            
+            <p>2. What is 2 + 2?</p>
+            <input type="radio" id="three" name="q2" value="three" required>
+            <label for="three">3</label><br>
+            <input type="radio" id="four" name="q2" value="four">
+            <label for="four">4</label><br>
+            <input type="radio" id="five" name="q2" value="five">
+            <label for="five">5</label><br><br>
+            
+            <p>3. Who wrote 'Romeo and Juliet'?</p>
+            <input type="radio" id="shakespeare" name="q3" value="shakespeare" required>
+            <label for="shakespeare">William Shakespeare</label><br>
+            <input type="radio" id="austen" name="q3" value="austen">
+            <label for="austen">Jane Austen</label><br>
+            <input type="radio" id="hemingway" name="q3" value="hemingway">
+            <label for="hemingway">Ernest Hemingway</label><br><br>
+            
+            <p>4. What is the boiling point of water?</p>
+            <input type="radio" id="hundred" name="q4" value="hundred" required>
+            <label for="hundred">100°C</label><br>
+            <input type="radio" id="fifty" name="q4" value="fifty">
+            <label for="fifty">50°C</label><br>
+            <input type="radio" id="seventy" name="q4" value="seventy">
+            <label for="seventy">70°C</label><br><br>
+        </fieldset>
+        
+        <!-- Completion Section -->
+        <fieldset>
+            <legend>Completion</legend>
+            
+            <input type="checkbox" id="confirm" name="confirm" required>
+            <label for="confirm">I confirm that the answers provided are my own.</label><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit Quiz">
+    </form>
+</body>
+</html>

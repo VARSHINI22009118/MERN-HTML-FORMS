@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal Form</title>
+</head>
+<body>
+    <h2 align="center">Withdrawal Form</h2>
+    <form  style="width: 50%; margin: 0 auto;background-color: #FFE5D9; padding: 20px; width: 500px;"" action="/submit-withdrawl="post" >
+    
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            
+            <label for="account-number">Account Number:</label>
+            <input type="text" id="account-number" name="account-number" required><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Withdrawal Details</legend>
+            <label for="withdrawal-amount">Withdrawal Amount:</label>
+            <input type="number" id="withdrawal-amount" name="withdrawal-amount" required><br><br>
+            
+            <label for="withdrawal-method">Withdrawal Method:</label>
+            <select id="withdrawal-method" name="withdrawal-method" required>
+                <option value="cash">Cash</option>
+                <option value="check">Check</option>
+                <option value="bank-transfer">Bank Transfer</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            
+            <label for="withdrawal-date">Withdrawal Date:</label>
+            <input type="date" id="withdrawal-date" name="withdrawal-date" required><br><br>
+            
+            <label for="reference-number">Reference Number:</label>
+            <input type="text" id="reference-number" name="reference-number"><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Remarks</legend>
+            <label for="remarks">Remarks (Optional):</label>
+            <textarea id="remarks" name="remarks" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit Withdrawal">
+    </form>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Form</title>
+</head>
+<body>
+    <h1 align="center">Donation Form</h1>
+    <form  style="width: 50%; margin: 0 auto;background-color: #C89F9C; padding: 20px; width: 500px;"" action="/submit_donation" method="post" >
+        <!-- Donor Information Section -->
+        <fieldset>
+            <legend>Donor Information</legend>
+            
+            <label for="donor_name">Donor Name:</label>
+            <input type="text" id="donor_name" name="donor_name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+            
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+        </fieldset>
+        
+        <!-- Donation Details Section -->
+        <fieldset>
+            <legend>Donation Details</legend>
+            
+            <label for="donation_amount">Donation Amount ($):</label>
+            <input type="number" id="donation_amount" name="donation_amount" step="0.01" required><br><br>
+            
+            <label for="donation_type">Donation Type:</label>
+            <select id="donation_type" name="donation_type" required>
+                <option value="">Select Donation Type</option>
+                <option value="one_time">One-Time</option>
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+            </select><br><br>
+            
+            <label for="payment_method">Payment Method:</label>
+            <select id="payment_method" name="payment_method" required>
+                <option value="">Select Payment Method</option>
+                <option value="credit_card">Credit Card</option>
+                <option value="debit_card">Debit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank_transfer">Bank Transfer</option>
+            </select><br><br>
+            
+            <label for="card_number">Card Number:</label>
+            <input type="text" id="card_number" name="card_number" pattern="[0-9]{16}" required><br><br>
+            
+            <label for="expiry_date">Expiry Date:</label>
+            <input type="month" id="expiry_date" name="expiry_date" required><br><br>
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" required><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit Donation">
+    </form>
+</body>
+</html>
+

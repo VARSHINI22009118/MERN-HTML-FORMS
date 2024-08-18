@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation Form</title>
+</head>
+<body>
+    <h2 align="center">Evaluation Form</h2>
+    <form  style="width: 50%; margin: 0 auto;background-color: #A76571; padding: 20px; width: 500px;"" action="/submit_evaluation" method="post" >
+        <fieldset>
+            <legend>Participant Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="event-name">Event/Workshop Name:</label>
+            <input type="text" id="event-name" name="event-name" required><br><br>
+            
+            <label for="event-date">Event Date:</label>
+            <input type="date" id="event-date" name="event-date" required><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Evaluation</legend>
+            <label for="rating">Overall Satisfaction:</label>
+            <select id="rating" name="rating" required>
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="average">Average</option>
+                <option value="poor">Poor</option>
+            </select><br><br>
+            
+            <label for="feedback">Feedback/Comments:</label>
+            <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br><br>
+            
+            <label for="recommend">Would you recommend this event to others?</label>
+            <input type="radio" id="yes" name="recommend" value="yes" required> Yes
+            <input type="radio" id="no" name="recommend" value="no" required> No<br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit Evaluation">
+    </form>
+</body>
+</html>

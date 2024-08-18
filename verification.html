@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Form</title>
+</head>
+<body>
+    <h1 align="center">Verification Form</h1>
+    
+    <form  style="width: 50%; margin: 0 auto;background-color: #CDC776; padding: 20px; width: 500px;"" action="/verify" method="post" >
+        <!-- Personal Identification Section -->
+        <fieldset>
+            <legend>Personal Identification</legend>
+            
+            <label for="id_type">ID Type:</label>
+            <select id="id_type" name="id_type" required>
+                <option value="">Select ID Type</option>
+                <option value="passport">Passport</option>
+                <option value="driver_license">Driver's License</option>
+                <option value="national_id">National ID</option>
+            </select><br><br>
+            
+            <label for="id_number">ID Number:</label>
+            <input type="text" id="id_number" name="id_number" required><br><br>
+            
+            <label for="issue_date">Issue Date:</label>
+            <input type="date" id="issue_date" name="issue_date" required><br><br>
+            
+            <label for="expiry_date">Expiry Date:</label>
+            <input type="date" id="expiry_date" name="expiry_date" required><br><br>
+        </fieldset>
+        
+        <!-- Contact Information Section -->
+        <fieldset>
+            <legend>Contact Information</legend>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+            
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+        </fieldset>
+        
+        <!-- Verification Details Section -->
+        <fieldset>
+            <legend>Verification Details</legend>
+            
+            <label for="verification_code">Verification Code:</label>
+            <input type="text" id="verification_code" name="verification_code" required><br><br>
+            
+            <label for="verification_purpose">Purpose of Verification:</label>
+            <select id="verification_purpose" name="verification_purpose" required>
+                <option value="">Select Purpose</option>
+                <option value="employment">Employment</option>
+                <option value="loan">Loan Application</option>
+                <option value="education">Educational Enrollment</option>
+                <option value="other">Other</option>
+            </select><br><br>
+        </fieldset>
+        
+        <!-- Authorization Section -->
+        <fieldset>
+            <legend>Authorization</legend>
+            
+            <input type="checkbox" id="authorize" name="authorize" required>
+            <label for="authorize">I authorize the verification of my personal information and documents.</label><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Verify">
+    </form>
+</body>
+</html>

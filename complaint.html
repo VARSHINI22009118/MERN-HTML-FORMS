@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Form</title>
+</head>
+<body>
+    <h2 align="center">Complaint Form</h2>
+    <form  style="width: 50%; margin: 0 auto;background-color: #D8DDEF; padding: 20px; width: 500px;"" action="/submit_complaint method="post" >
+    
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Complaint Details</legend>
+            <label for="complaint-type">Type of Complaint:</label>
+            <select id="complaint-type" name="complaint-type" required>
+                <option value="product">Product</option>
+                <option value="service">Service</option>
+                <option value="billing">Billing</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            
+            <label for="details">Complaint Details:</label>
+            <textarea id="details" name="details" rows="6" cols="50" required></textarea><br><br>
+            
+            <label for="date-of-incident">Date of Incident:</label>
+            <input type="date" id="date-of-incident" name="date-of-incident" required><br><br>
+            
+            <label for="urgency">Urgency Level:</label>
+            <input type="radio" id="low" name="urgency" value="low" required> Low
+            <input type="radio" id="medium" name="urgency" value="medium" required> Medium
+            <input type="radio" id="high" name="urgency" value="high" required> High<br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Supporting Documents</legend>
+            <label for="supporting-docs">Upload Supporting Documents:</label>
+            <input type="file" id="supporting-docs" name="supporting-docs"><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Resolution Sought</legend>
+            <label for="resolution">What resolution are you seeking?</label>
+            <textarea id="resolution" name="resolution" rows="4" cols="50" required></textarea><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit Complaint">
+    </form>
+</body>
+</html>

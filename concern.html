@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concern Form</title>
+</head>
+<body>
+    <h2 align="center">Concern Submission Form</h2>
+    <form  style="width: 50%; margin: 0 auto;background-color: #F7BFB4; padding: 20px; width: 500px;"" action="/submit_concern" method="post" >
+    
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Concern Details</legend>
+            <label for="concern-type">Type of Concern:</label>
+            <select id="concern-type" name="concern-type" required>
+                <option value="product-issue">Product Issue</option>
+                <option value="service-issue">Service Issue</option>
+                <option value="billing-issue">Billing Issue</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            
+            <label for="details">Details of Concern:</label>
+            <textarea id="details" name="details" rows="6" cols="50" required></textarea><br><br>
+            
+            <label for="urgency">Urgency Level:</label>
+            <input type="radio" id="low" name="urgency" value="low" required> Low
+            <input type="radio" id="medium" name="urgency" value="medium" required> Medium
+            <input type="radio" id="high" name="urgency" value="high" required> High<br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Supporting Documents</legend>
+            <label for="supporting-docs">Upload Supporting Documents:</label>
+            <input type="file" id="supporting-docs" name="supporting-docs"><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Consent</legend>
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">I agree to the terms and conditions.</label><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit Concern">
+    </form>
+</body>
+</html>

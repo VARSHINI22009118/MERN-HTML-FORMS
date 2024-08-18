@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train / Flight / Bus Booking Form</title>
+</head>
+<body>
+    <h1 align="center">Train / Flight / Bus Booking Form</h1>
+    <form  style="width: 50%; margin: 0 auto;background-color: #6EB4D1; padding: 20px; width: 500px;"" action="/verify" method="post" >
+        <!-- Personal Information Section -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required><br><br>
+            
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+        
+        
+        <!-- Travel Details Section -->
+        
+            <legend>Travel Details</legend>
+            
+            <label for="travel_type">Travel Type:</label>
+            <select id="travel_type" name="travel_type" required>
+                <option value="">Select Travel Type</option>
+                <option value="train">Train</option>
+                <option value="flight">Flight</option>
+                <option value="bus">Bus</option>
+            </select><br><br>
+            
+            <label for="departure_city">Departure City:</label>
+            <input type="text" id="departure_city" name="departure_city" required><br><br>
+            
+            <label for="arrival_city">Arrival City:</label>
+            <input type="text" id="arrival_city" name="arrival_city" required><br><br>
+            
+            <label for="departure_date">Departure Date:</label>
+            <input type="date" id="departure_date" name="departure_date" required><br><br>
+            
+            <label for="return_date">Return Date (if round trip):</label>
+            <input type="date" id="return_date" name="return_date"><br><br>
+            
+            <label for="class">Class:</label>
+            <select id="class" name="class" required>
+                <option value="">Select Class</option>
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="first">First Class</option>
+            </select><br><br>
+            
+            <label for="seating_preference">Seating Preference:</label>
+            <select id="seating_preference" name="seating_preference">
+                <option value="">Select Preference</option>
+                <option value="aisle">Aisle</option>
+                <option value="window">Window</option>
+                <option value="middle">Middle</option>
+            </select><br><br>
+            
+            <label for="special_requests">Special Requests:</label><br>
+            <textarea id="special_requests" name="special_requests" rows="4" cols="50"></textarea><br><br>
+       
+        
+        <!-- Payment Information Section -->
+        
+            <legend>Payment Information</legend>
+            
+            <label for="card_type">Card Type:</label>
+            <select id="card_type" name="card_type" required>
+                <option value="">Select Card Type</option>
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="amex">American Express</option>
+            </select><br><br>
+            
+            <label for="card_number">Card Number:</label>
+            <input type="text" id="card_number" name="card_number" pattern="[0-9]{16}" required><br><br>
+            
+            <label for="expiry_date">Expiry Date:</label>
+            <input type="month" id="expiry_date" name="expiry_date" required><br><br>
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" required><br><br>
+            
+            <label for="billing_address">Billing Address:</label><br>
+            <textarea id="billing_address" name="billing_address" rows="4" cols="50" required></textarea><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Book Now">
+    </form>
+</body>
+</html>

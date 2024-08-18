@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Form</title>
+</head>
+<body>
+    <h1 align="center">Profile Form</h1>
+    <form  style="width: 50%; margin: 0 auto;background-color: #C2847A; padding: 20px; width: 500px;"" action="/update_profile" method="post" >
+        <!-- Personal Information Section -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required><br><br>
+            
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required><br><br>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+        </fieldset>
+        
+        <!-- Contact Information Section -->
+        <fieldset>
+            <legend>Contact Information</legend>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+            
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+        </fieldset>
+        
+        <!-- Account Information Section -->
+        <fieldset>
+            <legend>Account Information</legend>
+            
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+        </fieldset>
+        
+        <!-- Social Links Section -->
+        <fieldset>
+            <legend>Social Links</legend>
+            
+            <label for="linkedin">LinkedIn Profile:</label>
+            <input type="url" id="linkedin" name="linkedin"><br><br>
+            
+            <label for="twitter">Twitter Handle:</label>
+            <input type="url" id="twitter" name="twitter"><br><br>
+            
+            <label for="github">GitHub Profile:</label>
+            <input type="url" id="github" name="github"><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Update Profile">
+    </form>
+</body>
+</html>

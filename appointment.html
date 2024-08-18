@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+</head>
+<body>
+    <h2 align="center">Appointment Booking Form</h2>
+    <form  style="width: 50%; margin: 0 auto;background-color: #D5ACA9; padding: 20px; width: 500px;"" action="/book-appointment" method="post" >
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Appointment Details</legend>
+            <label for="appointment-type">Appointment Type:</label>
+            <select id="appointment-type" name="appointment-type" required>
+                <option value="consultation">Consultation</option>
+                <option value="follow-up">Follow-up</option>
+                <option value="diagnostic">Diagnostic Test</option>
+                <option value="therapy">Therapy Session</option>
+            </select><br><br>
+            
+            <label for="appointment-date">Preferred Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" required><br><br>
+            
+            <label for="appointment-time">Preferred Time:</label>
+            <input type="time" id="appointment-time" name="appointment-time" required><br><br>
+            
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Book Appointment">
+    </form>
+</body>
+</html>

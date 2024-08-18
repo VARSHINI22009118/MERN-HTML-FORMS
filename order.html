@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+</head>
+<body>
+    <h1 align="center">Order Form</h1>
+    <form  style="width: 50%; margin: 0 auto;background-color: #83858C; padding: 20px; width: 500px;"" action="/submit_order" method="post" >
+    
+        <!-- Customer Information Section -->
+        <fieldset>
+            <legend>Customer Information</legend>
+            
+            <label for="customer_name">Customer Name:</label>
+            <input type="text" id="customer_name" name="customer_name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+            
+            <label for="address">Delivery Address:</label><br>
+            <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+        </fieldset>
+        
+        <!-- Order Details Section -->
+        <fieldset>
+            <legend>Order Details</legend>
+            
+            <label for="product_name">Product Name:</label>
+            <input type="text" id="product_name" name="product_name" required><br><br>
+            
+            <label for="product_quantity">Quantity:</label>
+            <input type="number" id="product_quantity" name="product_quantity" min="1" required><br><br>
+            
+            <label for="product_size">Size (if applicable):</label>
+            <input type="text" id="product_size" name="product_size"><br><br>
+            
+            <label for="product_color">Color (if applicable):</label>
+            <input type="text" id="product_color" name="product_color"><br><br>
+            
+            <label for="special_instructions">Special Instructions:</label><br>
+            <textarea id="special_instructions" name="special_instructions" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+        
+        <!-- Payment Information Section -->
+        <fieldset>
+            <legend>Payment Information</legend>
+            
+            <label for="payment_method">Payment Method:</label>
+            <select id="payment_method" name="payment_method" required>
+                <option value="">Select Payment Method</option>
+                <option value="credit_card">Credit Card</option>
+                <option value="debit_card">Debit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="cod">Cash on Delivery</option>
+            </select><br><br>
+            
+            <label for="card_number">Card Number:</label>
+            <input type="text" id="card_number" name="card_number" pattern="[0-9]{16}" required><br><br>
+            
+            <label for="expiry_date">Expiry Date:</label>
+            <input type="month" id="expiry_date" name="expiry_date" required><br><br>
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" required><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit Order">
+    </form>
+</body>
+</html>

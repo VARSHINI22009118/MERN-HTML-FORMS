@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Application Form</title>
+</head>
+<body>
+    <h2 align="center">Leave Application Form</h2>
+    <form  style="width: 50%; margin: 0 auto;background-color: #F3E9DC; padding: 20px; width: 500px;"" action="/submit_leave-application="post" >
+    
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" required><br><br>
+            
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position" required><br><br>
+            
+            <label for="manager">Manager/Supervisor Name:</label>
+            <input type="text" id="manager" name="manager" required><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Leave Details</legend>
+            <label for="leave-type">Type of Leave:</label>
+            <select id="leave-type" name="leave-type" required>
+                <option value="sick">Sick Leave</option>
+                <option value="vacation">Vacation Leave</option>
+                <option value="personal">Personal Leave</option>
+                <option value="maternity">Maternity/Paternity Leave</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            
+            <label for="leave-start-date">Start Date:</label>
+            <input type="date" id="leave-start-date" name="leave-start-date" required><br><br>
+            
+            <label for="leave-end-date">End Date:</label>
+            <input type="date" id="leave-end-date" name="leave-end-date" required><br><br>
+            
+            <label for="leave-reason">Reason for Leave:</label>
+            <textarea id="leave-reason" name="leave-reason" rows="6" cols="50" required></textarea><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Contact During Leave</legend>
+            <label for="leave-contact">Contact Information During Leave (if different):</label>
+            <textarea id="leave-contact" name="leave-contact" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Approval</legend>
+            <label for="manager-approval">Manager's Approval:</label>
+            <input type="text" id="manager-approval" name="manager-approval" readonly><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit Leave Application">
+    </form>
+</body>
+</html>

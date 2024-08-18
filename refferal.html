@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Form</title>
+</head>
+<body>
+    <h2 align="center">Referral Form</h2>
+    <form  style="width: 50%; margin: 0 auto;background-color: #7DAF9C; padding: 20px; width: 500px;"" action="/submit_referral" method="post" >
+    
+        <fieldset>
+            <legend>Your Information</legend>
+            <label for="your-name">Your Full Name:</label>
+            <input type="text" id="your-name" name="your-name" required><br><br>
+            
+            <label for="your-email">Your Email:</label>
+            <input type="email" id="your-email" name="your-email" required><br><br>
+            
+            <label for="your-phone">Your Phone Number:</label>
+            <input type="tel" id="your-phone" name="your-phone" required><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Referral Information</legend>
+            <label for="referral-name">Referral's Full Name:</label>
+            <input type="text" id="referral-name" name="referral-name" required><br><br>
+            
+            <label for="referral-email">Referral's Email:</label>
+            <input type="email" id="referral-email" name="referral-email" required><br><br>
+            
+            <label for="referral-phone">Referral's Phone Number:</label>
+            <input type="tel" id="referral-phone" name="referral-phone" required><br><br>
+            
+            <label for="relationship">Relationship to Referral:</label>
+            <input type="text" id="relationship" name="relationship" required><br><br>
+            
+            <label for="referral-details">Details or Message:</label>
+            <textarea id="referral-details" name="referral-details" rows="4" cols="50" required></textarea><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Consent</legend>
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">I confirm that the referral has consented to be referred and that their contact information may be used.</label><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit Referral">
+    </form>
+</body>
+</html>
